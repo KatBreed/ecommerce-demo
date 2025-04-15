@@ -1,0 +1,3 @@
+This is a rebuild of the previous bookshop-demo project. This was to incorporate Vite and I also changed to MondoDB instead of Postgres.
+
+This project is to expand on my skills and portfolio. To ahve a go at building an e-commerce site complete with cart and fake payment system.
