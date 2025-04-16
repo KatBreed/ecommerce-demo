@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -7,19 +7,28 @@ import Cart from "./pages/Cart";
 import AdminBookForm from "./pages/AdminBookForm";
 
 const App = () => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    // Initialise from localStorage
+  const storedCart = localStorage.getItem("cart");
+  return storedCart ? JSON.parse(storedCart) : [];
+});
 
-  return (
-    <Router>
-      <Header cartItemCount={cart.length} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
-        <Route path="/admin" element={<AdminBookForm />} />
-      </Routes>
-    </Router>
-  );
+useEffect(() => {
+  // Save cart change to localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+}, [cart]);
+
+return (
+  <Router>
+    <Header cartItemCount={cart.length} />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
+      <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
+      <Route path="/admin" element={<AdminBookForm />} />
+    </Routes>
+  </Router>
+);
 };
 
 export default App;
