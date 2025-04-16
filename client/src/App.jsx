@@ -1,30 +1,28 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './pages/Home'
-import Shop from './pages/Shop'
-import Cart from './pages/Cart'
-import Checkout from './pages/Checkout'
-import AdminBookForm from './pages/AdminBookForm'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
+import AdminBookForm from "./pages/AdminBookForm";
 
-function App() {
+const App = () => {
+  const [cart, setCart] = useState([]);
+
   return (
     <Router>
-      <Header cartItemCount={0} />
+      <Header cartItemCount={cart.length} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/admin" element={<AdminBookForm/>} />
+        <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/admin" element={<AdminBookForm />} />
       </Routes>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
 
 

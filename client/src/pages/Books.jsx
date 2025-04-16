@@ -27,21 +27,22 @@ export default function Books() {
             {!loading && !error && (
                 <div className="row">
                     {books.map(book => (
-                        <div key={book._id} className="col-md-6 col-lg-4 mb-4">
-                            <div className="card h-100 shadow-sm">
+                        <div key={book._id} className="col-sm-4 col-md-3 col-lg-2 mb-2">
+                            <div className="card h-100 shadow-sm" style={{ maxWidth: '180px' }}>
                                 {book.coverImage && (
                                     <img
-                                        src={book.coverImage}
-                                        alt={book.title}
-                                        className="card-img-top img-fluid"
-                                    />
+                                    src={book.coverImage}
+                                    alt={book.title}
+                                    className="card-img-top img-fluid"
+                                    style={{ maxHeight: '200px', objectFit: 'contain' }}
+                                  />
                                 )}
-                                <div className="card-body">
-                                    <h5 className="card-title">{book.title}</h5>
-                                    <h6 className="text-muted">{book.authors?.join(', ')}</h6>
-                                    <p className="card-text">{book.description}</p>
+                                <div className="card-body" style={{ padding: '10px' }}>
+                                    <h5 className="card-title" style={{ fontSize: '1rem' }}>{book.title}</h5>
+                                    <h6 className="text-muted" style={{ fontSize: '0.85rem' }}>{book.authors?.join(', ')}</h6>
+                                    <p className="card-text" style={{ fontSize: '0.8rem' }}>{book.description}</p>
                                 </div>
-                                <div className="card-footer">
+                                <div className="card-footer" style={{ padding: '5px', fontSize: '0.9rem' }}>
                                     <span className="text-primary fw-bold">${book.price}</span>
                                 </div>
                             </div>
