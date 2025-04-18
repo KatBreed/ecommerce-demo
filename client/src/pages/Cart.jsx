@@ -60,7 +60,7 @@ const Cart = ({ cart, setCart }) => {
                   <div className="mb-2 mb-md-0">
                     <strong>{item.title}</strong>
                     <div className="small text-muted">
-                      ${item.price.toFixed(2)} × {item.quantity} = ${(item.price * item.quantity).toFixed(2)}
+                      NZD ${item.price.toFixed(2)} × {item.quantity} = ${(item.price * item.quantity).toFixed(2)}
                     </div>
                   </div>
 
@@ -95,7 +95,7 @@ const Cart = ({ cart, setCart }) => {
             <div className="border rounded p-4 shadow-sm bg-light sticky-top text-center">
               <h5 className="d-flex justify-content-between fw-bold">
                 <span>Total:</span>
-                <span className="text-success">${total.toFixed(2)}</span>
+                <span className="text-success">NZD ${total.toFixed(2)}</span>
               </h5>
 
               <div className="mt-4 d-flex justify-content-between">

@@ -54,7 +54,7 @@ const Shop = ({ cart, setCart }) => {
                   src={book.coverImage}
                   alt={book.title}
                   className="card-img-top img-fluid"
-                  style={{ maxHeight: '150px', objectFit: 'contain' }}
+                  style={{ maxHeight: '180px', objectFit: 'contain' }}
                 />
               )}
               <div className="card-body d-flex flex-column">
@@ -76,7 +76,7 @@ const Shop = ({ cart, setCart }) => {
                   {book.format}
                 </h6>
                 <p className="card-text text-success fw-bold" style={{ fontSize: '0.85rem' }}>
-                  ${book.price?.toFixed(2)}
+                  NZD ${book.price?.toFixed(2)}
                 </p>
                 <button
                   className="btn btn-sm btn-primary mt-auto"

@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import AdminBookForm from "./pages/AdminBookForm";
+import Success from "./pages/Success";
+import Cancel from "./pages/Cancel";
 
 const App = () => {
   const [cart, setCart] = useState(() => {
@@ -26,6 +28,8 @@ return (
       <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
       <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
       <Route path="/admin" element={<AdminBookForm />} />
+      <Route path="/success" element={<Success setCart={setCart}/>} />
+      <Route path="/cancel" element={<Cancel/>} />
     </Routes>
   </Router>
 );

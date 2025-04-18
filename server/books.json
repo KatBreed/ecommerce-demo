@@ -148,6 +148,49 @@
       "dimensions": "238 x 160 x 32 mm",
       "synopsis": "'You know you can change your mind, don't you? Even now. Even when you are halfway across the English Channel. Any time before you jump.' Yes, she did. An hour later, she was parachuting into Nazi-occupied France to begin a mission that was fraught with danger...",
       "coverImage": "last-secret-agent.jpg"
+    },
+    {
+      "title": "Fearless",
+      "authors": ["Lauren Roberts"],
+      "description": "Paedyn and Kai embark upon their final adventure in the thrilling conclusion to Roberts' megaselling YA romantasy series.",
+      "price": 28.99,
+      "publisher": "Simon & Schuster Ltd",
+      "publishDate": "2025-04-08T00:00:00.000Z",
+      "isbn": "9781398543454",
+      "format": "Paperback",
+      "pages": 528,
+      "dimensions": "234 x 153 x 35 mm",
+      "synopsis": "Paedyn Gray and Kai Azer return to the Kingdom of Ilya... And Paedyn has a life-altering choice to make. Whatever she decides will determine her fate – and the fate of those around her – forever. In the ultimate battle of love and loyalty, who wins? Be swept away by the conclusion to the smash hit, dagger-to-the-throat romantasy trilogy.",
+      "coverImage": "fearless.jpg"
+    },
+    {
+      "title": "Ali Mau",
+      "authors": ["No Words For This"],
+      "description": "The much anticipated memoir by media personality Alison Mau. In my family, we never talked about the past... Since the age of twelve, Alison Mau wanted to be a journalist just like her dad. A beer-swilling, straight-talking man who was rough around the edges but could quote passages of Hamlet at will, he taught Ali everything from rabbit-hunting to throwing a punch and crafting a sharp sentence.",
+      "price": 39.99,
+      "publisher": "HarperCollins Publishers (New Zealand)",
+      "publishDate": "2025-04-01T00:00:00.000Z",
+      "isbn": "9781775542537",
+      "format": "Trade Paperback",
+      "pages": 304,
+      "dimensions": "H235 x W155 x S25",
+      "synopsis": "The much anticipated memoir by media personality Alison Mau recounts her life, from her beginnings in Melbourne to her rise as New Zealand's media darling. A story of overcoming challenges, sexual abuse, and a deep dive into the #MeToo movement.",
+      "coverImage": "ali-mau.jpg"
+    },
+    {
+      "title": "Frankie",
+      "authors": ["Graham Norton"],
+      "description": "This expansive, heartfelt story of memory and human connection from the bestselling author of Home Stretch and A Keeper finds an elderly Londoner and her young Irish carer bond, as the titular protagonist tells him the story of her past filled with larger-than-life characters.",
+      "price": 37.99,
+      "publisher": "Hodder & Stoughton",
+      "publishDate": "2024-09-10T00:00:00.000Z",
+      "isbn": "9781529391459",
+      "format": "Paperback",
+      "pages": 336,
+      "weight": "305g",
+      "dimensions": "234 x 153 x 35 mm",
+      "synopsis": "Frankie Howe has lived a long life, and her small London flat is crammed full of art, furniture, and memories. Damian, her young carer, listens as she gradually tells him parts of her story, from New York's art scene to her life in London. Frankie discovers that life is not always the one we hope for, or the one others expect of us.",
+      "coverImage": "frankie.jpg"
     }
   ]
   
