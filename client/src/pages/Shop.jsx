@@ -16,7 +16,7 @@ const Shop = ({ cart, setCart }) => {
       .then((res) => {
         const uniqueBooks = res.data.filter(
           (book, index, self) =>
-            index === self.findIndex((b) => b._id === book._id)
+            index === self.findIndex((b) => b._id === book._id),
         );
         setBooks(uniqueBooks);
         setSortedBooks(uniqueBooks);
@@ -36,7 +36,7 @@ const Shop = ({ cart, setCart }) => {
         return prevCart.map((item) =>
           item._id === book._id
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       } else {
         return [...prevCart, { ...book, quantity: 1 }];
@@ -53,8 +53,8 @@ const Shop = ({ cart, setCart }) => {
         book.title.toLowerCase().includes(keyword) ||
         (book.authors &&
           book.authors.some((author) =>
-            author.toLowerCase().includes(keyword)
-          ))
+            author.toLowerCase().includes(keyword),
+          )),
     );
     setSortedBooks(filtered);
   };
@@ -62,7 +62,7 @@ const Shop = ({ cart, setCart }) => {
   // Sort books by price
   const sortBooksByPrice = (direction) => {
     const sorted = [...sortedBooks].sort((a, b) =>
-      direction === "asc" ? a.price - b.price : b.price - a.price
+      direction === "asc" ? a.price - b.price : b.price - a.price,
     );
     setSortedBooks(sorted);
   };
@@ -72,7 +72,9 @@ const Shop = ({ cart, setCart }) => {
       {/* Breadcrumbs */}
       <nav className="mb-4">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li className="breadcrumb-item">
+            <Link to="/">Home</Link>
+          </li>
           <li className="breadcrumb-item active">Shop</li>
         </ol>
       </nav>
@@ -109,7 +111,9 @@ const Shop = ({ cart, setCart }) => {
                 className="form-select border-primary text-primary"
                 defaultValue=""
               >
-                <option value="" disabled>Choose...</option>
+                <option value="" disabled>
+                  Choose...
+                </option>
                 <option value="asc">Low to High</option>
                 <option value="desc">High to Low</option>
               </select>
@@ -130,7 +134,10 @@ const Shop = ({ cart, setCart }) => {
             {sortedBooks.map((book) => (
               <div className="col-6 col-md-4 col-lg-3 mb-4" key={book._id}>
                 <div className="card h-100 border-0 shadow-sm text-decoration-none p-2">
-                  <Link to={`/book/${book._id}`} className="text-decoration-none">
+                  <Link
+                    to={`/book/${book._id}`}
+                    className="text-decoration-none"
+                  >
                     {book.coverImage && (
                       <img
                         src={book.coverImage}
@@ -144,7 +151,9 @@ const Shop = ({ cart, setCart }) => {
                       <small className="text-muted mb-1">
                         by {book.authors?.join(", ")}
                       </small>
-                      <small className="text-secondary mb-2">{book.format}</small>
+                      <small className="text-secondary mb-2">
+                        {book.format}
+                      </small>
                       <p className="fw-bold text-body mb-2">
                         NZD ${book.price?.toFixed(2)}
                       </p>

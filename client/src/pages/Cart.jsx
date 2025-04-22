@@ -1,17 +1,17 @@
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe } from "@stripe/stripe-js";
 
 const Cart = ({ cart, setCart }) => {
   const removeFromCart = (id) => {
-    setCart(prev => prev.filter(item => item._id !== id));
+    setCart((prev) => prev.filter((item) => item._id !== id));
   };
 
   const updateQuantity = (id, delta) => {
-    setCart(prev =>
-      prev.map(item =>
+    setCart((prev) =>
+      prev.map((item) =>
         item._id === id
           ? { ...item, quantity: Math.max(1, item.quantity + delta) }
-          : item
-      )
+          : item,
+      ),
     );
   };
 
@@ -20,18 +20,23 @@ const Cart = ({ cart, setCart }) => {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const handleCheckout = async () => {
-    const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY); // Use your test Publishable Key
-  
-    const response = await fetch('http://localhost:5000/api/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ cartItems: cart }),
-    });
-  
+    const stripe = await loadStripe(
+      import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY,
+    ); // Use your test Publishable Key
+
+    const response = await fetch(
+      "http://localhost:5000/api/create-checkout-session",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cartItems: cart }),
+      },
+    );
+
     const session = await response.json();
-  
+
     await stripe.redirectToCheckout({ sessionId: session.id });
-  };  
+  };
 
   return (
     <div className="container-fluid pt-3 mt-5">
@@ -52,15 +57,22 @@ const Cart = ({ cart, setCart }) => {
                 >
                   <div className="d-flex align-items-center mb-3 mb-md-0">
                     <img
-                      src={item.coverImage} 
+                      src={item.coverImage}
                       alt={item.title}
-                      style={{ width: "60px", height: "auto", objectFit: "cover", marginRight: "15px", borderRadius: "4px" }}
+                      style={{
+                        width: "60px",
+                        height: "auto",
+                        objectFit: "cover",
+                        marginRight: "15px",
+                        borderRadius: "4px",
+                      }}
                     />
                   </div>
                   <div className="mb-2 mb-md-0">
                     <strong>{item.title}</strong>
                     <div className="small text-muted">
-                      NZD ${item.price.toFixed(2)} × {item.quantity} = ${(item.price * item.quantity).toFixed(2)}
+                      NZD ${item.price.toFixed(2)} × {item.quantity} = $
+                      {(item.price * item.quantity).toFixed(2)}
                     </div>
                   </div>
 
@@ -99,10 +111,16 @@ const Cart = ({ cart, setCart }) => {
               </h5>
 
               <div className="mt-4 d-flex justify-content-between">
-                <button className="btn btn-outline-danger flex-grow-1 me-3 py-2" onClick={clearCart}>
+                <button
+                  className="btn btn-outline-danger flex-grow-1 me-3 py-2"
+                  onClick={clearCart}
+                >
                   🗑️ Clear Cart
                 </button>
-                <button className="btn btn-success flex-grow-1 py-2" onClick={handleCheckout}>
+                <button
+                  className="btn btn-success flex-grow-1 py-2"
+                  onClick={handleCheckout}
+                >
                   💳 Checkout
                 </button>
               </div>

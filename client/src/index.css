@@ -72,7 +72,9 @@ button:focus-visible {
 }
 
 .card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   background-color: #fff;
   border-radius: 0.5rem;
 }
@@ -94,7 +96,7 @@ button:focus-visible {
   justify-content: flex-start; /* Prevent unwanted centering */
 }
 
-/* Nav/Header Styling Tweaks */
+/* Nav_Header Styling Tweaks */
 .navbar-brand {
   font-size: 1.6rem;
   letter-spacing: 0.5px;
@@ -125,4 +127,3 @@ button:focus-visible {
   font-size: 1.2rem;
   color: white;
 }
-

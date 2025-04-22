@@ -37,7 +37,10 @@ const App = () => {
     { path: "/admin", element: <AdminBookForm /> },
     { path: "/success", element: <Success setCart={setCart} /> },
     { path: "/cancel", element: <Cancel /> },
-    { path: "/book/:id", element: <BookDetail cart={cart} setCart={setCart}/> }
+    {
+      path: "/book/:id",
+      element: <BookDetail cart={cart} setCart={setCart} />,
+    },
   ];
 
   return (
