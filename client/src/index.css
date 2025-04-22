@@ -25,9 +25,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: block;
 }
 
 h1 {
@@ -87,3 +87,42 @@ button:focus-visible {
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
+
+.list-group-item {
+  display: flex;
+  flex-wrap: wrap; /* Ensures items don’t get squeezed */
+  justify-content: flex-start; /* Prevent unwanted centering */
+}
+
+/* Nav/Header Styling Tweaks */
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+}
+
+.navbar {
+  height: 60px; /* Adjust based on preference */
+  padding: 10px 15px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 15px;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 8px;
+  background: transparent;
+}
+.navbar-toggler:hover {
+  opacity: 0.8;
+}
+
+.nav-link svg {
+  font-size: 1.2rem;
+  color: white;
+}
+

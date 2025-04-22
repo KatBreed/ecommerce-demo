@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Make sure to import Bootstrap JS
 import { FaShoppingCart } from "react-icons/fa";
 
 const Header = ({ cartItemCount = 0 }) => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand fw-bold" to="/" style={{ fontSize: "1.4rem" }}>
             📘 Demo Bookshop

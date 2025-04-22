@@ -34,13 +34,13 @@ const Cart = ({ cart, setCart }) => {
   };  
 
   return (
-    <div className="container py-5">
+    <div className="container-fluid pt-3 mt-5">
       <h2 className="mb-4 text-center">🛒 Your Cart</h2>
 
       {cart.length === 0 ? (
         <p className="text-center text-muted">Your cart is empty.</p>
       ) : (
-        <div className="row justify-content-center">
+        <div className="row">
           {/* Cart Items */}
           <div className="col-lg-8">
             <ul className="list-group mb-4">
