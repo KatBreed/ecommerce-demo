@@ -127,3 +127,20 @@ button:focus-visible {
   font-size: 1.2rem;
   color: white;
 }
+
+.chevron-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #413f3f;
+  cursor: pointer;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}

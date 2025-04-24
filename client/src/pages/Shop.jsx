@@ -133,7 +133,7 @@ const Shop = ({ cart, setCart }) => {
                 type="text"
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
-                className="form-control border-dark"
+                className="form-control border-primary"
                 placeholder="Title or Author..."
               />
             </div>
@@ -143,7 +143,7 @@ const Shop = ({ cart, setCart }) => {
               <select
                 value={genre}
                 onChange={(e) => setGenre(e.target.value)}
-                className="form-select border-dark"
+                className="form-select border-primary"
               >
                 <option value="all">All Genres</option>
                 {genres.map((g) => (
@@ -159,7 +159,7 @@ const Shop = ({ cart, setCart }) => {
               <select
                 value={format}
                 onChange={(e) => setFormat(e.target.value)}
-                className="form-select border-dark"
+                className="form-select border-primary"
               >
                 <option value="all">All Formats</option>
                 {formats.map((f) => (
@@ -175,7 +175,7 @@ const Shop = ({ cart, setCart }) => {
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value)}
-                className="form-select border-dark"
+                className="form-select border-primary"
               >
                 <option value="">Choose...</option>
                 <option value="priceAsc">Price: Low to High</option>
@@ -191,7 +191,7 @@ const Shop = ({ cart, setCart }) => {
           <div className="row">
             {displayBooks.map((book) => (
               <div className="col-6 col-md-4 col-lg-3 mb-4" key={book._id}>
-                <div className="card h-100 border-1 shadow-sm p-2">
+                <div className="card h-100 border-2 shadow-sm p-2">
                   <Link
                     to={`/book/${book._id}`}
                     className="text-decoration-none"
