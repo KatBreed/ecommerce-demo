@@ -34,6 +34,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Stripe setup
 import Stripe from 'stripe';
+import { CgPassword } from 'react-icons/cg';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Stripe webhook endpoint (MUST come before express.json)
@@ -86,15 +87,23 @@ const adminJs = new AdminJS({
   rootPath: '/admin',
 });
 
-const adminRouter = AdminJSExpress.buildAuthenticatedRouter(adminJs, {
-  authenticate: async (email, password) => {
-    if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
-      return { email };
-    }
-    return null;
+const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
+  adminJs,
+  {
+    authenticate: async (email, password) => {
+      if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+        return {email};
+      }
+      return null;
+    },
+    cookiePassword: process.env.COOKIE_SECRET || 'some-secure-cookie',
   },
-  cookiePassword: process.env.COOKIE_SECRET || 'some-secure-cookie',
-});
+  null,
+  {
+    resave: false,
+    saveUninitialized: false,
+  }
+);
 
 app.use(adminJs.options.rootPath, adminRouter);
 
@@ -212,9 +221,12 @@ app.post('/api/create-checkout-session', async (req, res) => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => {
-    console.log('✅ MongoDB connected successfully');
+    console.log('✅ MongoDB connected successfully to Atlas');
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })
   .catch(err => {

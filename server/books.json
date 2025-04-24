@@ -1,7 +1,9 @@
 [
   {
     "title": "Here One Moment",
-    "authors": ["Liane Moriarty"],
+    "authors": [
+      "Liane Moriarty"
+    ],
     "description": "From the author of bestselling phenomenon Big Little Lies comes a compelling novel of family and fate, as a mysterious old woman sows confusion and paranoia in the lives of a disparate group of individuals.",
     "price": 37.99,
     "publisher": "Pan Macmillan",
@@ -16,9 +18,12 @@
   },
   {
     "title": "In Too Deep: (Jack Reacher 29)",
-    "authors": ["Lee Child", "Andrew Child"],
+    "authors": [
+      "Lee Child",
+      "Andrew Child"
+    ],
     "description": "Reacher finds himself the captive of a gang who have some very disturbing plans in this rollercoaster ride of a thriller...",
-    "price": 38.0,
+    "price": 38,
     "publisher": "Transworld Publishers Ltd",
     "publishDate": "2024-10-22T00:00:00.000Z",
     "isbn": "9780857505606",
@@ -31,7 +36,9 @@
   },
   {
     "title": "Sunrise on the Reaping",
-    "authors": ["Suzanne Collins"],
+    "authors": [
+      "Suzanne Collins"
+    ],
     "description": "The eagerly awaited fifth Hunger Games book - and second prequel - places fan-favourite Haymitch Abernathy centre stage in an unputdownable tale of danger, action and intrigue set during the fiftieth deadly contest",
     "price": 19.99,
     "publisher": "Scholastic",
@@ -46,7 +53,9 @@
   },
   {
     "title": "Nobody's Fool",
-    "authors": ["Harlan Coben"],
+    "authors": [
+      "Harlan Coben"
+    ],
     "description": "From the mega-selling author of Tell No One and Think Twice comes the electrifying sequel to Fool Me Once...",
     "price": 29.99,
     "publisher": "Cornerstone",
@@ -61,7 +70,10 @@
   },
   {
     "title": "25 Alive",
-    "authors": ["James Patterson", "Maxine Paetro"],
+    "authors": [
+      "James Patterson",
+      "Maxine Paetro"
+    ],
     "description": "The Women's Murder Club return in the 25th riveting instalment in Patterson's bestselling series...",
     "price": 39.99,
     "publisher": "Cornerstone",
@@ -76,9 +88,11 @@
   },
   {
     "title": "Madly, Deeply: The Alan Rickman Diaries",
-    "authors": ["Alan Rickman"],
+    "authors": [
+      "Alan Rickman"
+    ],
     "description": "The beloved and much-missed actor offers his legion of fans a window into Hollywood glamour...",
-    "price": 75.0,
+    "price": 75,
     "publisher": "Canongate Books",
     "publishDate": "2022-11-17T00:00:00.000Z",
     "isbn": "9781838854799",
@@ -91,9 +105,11 @@
   },
   {
     "title": "38 Londres Street",
-    "authors": ["Philippe Sands"],
+    "authors": [
+      "Philippe Sands"
+    ],
     "description": "Through this captivating blend of memoir, travelogue, detective story, and courtroom drama, the award-winning author of East West Street and The Last Colony chronicles the entwining stories of Chilean dictator Augusto Pinochet and senior SS officer Walther Rauff in a powerful examination of historical atrocities and the search for justice.",
-    "price": 73.0,
+    "price": 73,
     "publisher": "Orion Publishing Co",
     "publishDate": "2025-03-04T00:00:00.000Z",
     "isbn": "9781474620741",
@@ -106,9 +122,11 @@
   },
   {
     "title": "The Let Them",
-    "authors": ["Mel Robbins"],
+    "authors": [
+      "Mel Robbins"
+    ],
     "description": "The bestselling motivational coach behind The High 5 Habit delivers an empowering philosophy for breaking free of other people's negative energy and living your best life.",
-    "price": 32.0,
+    "price": 32,
     "publisher": "Hay House Inc",
     "publishDate": "2025-01-07T00:00:00.000Z",
     "isbn": "9781401994136",
@@ -121,9 +139,11 @@
   },
   {
     "title": "Shakespeare",
-    "authors": ["Judi Dench"],
+    "authors": [
+      "Judi Dench"
+    ],
     "description": "Recounted with Dame Judi Dench's characteristic twinkling wit, this endlessly fascinating volume finds the legendary actress reflecting on every Shakespearean performance in her stellar career.",
-    "price": 35.0,
+    "price": 35,
     "publisher": "Penguin Books Ltd",
     "publishDate": "2024-09-26T00:00:00.000Z",
     "isbn": "9781405956420",
@@ -136,7 +156,10 @@
   },
   {
     "title": "The Last Secret Agent",
-    "authors": ["Pippa Latour", "Jude Dobson"],
+    "authors": [
+      "Pippa Latour",
+      "Jude Dobson"
+    ],
     "description": "In this vivid and eye-opening tale of wartime service and danger, the last surviving SOE agent recounts her time working behind enemy lines in Nazi-occupied France for the first time.",
     "price": 37.99,
     "publisher": "Allen & Unwin Aotearoa New Zealand",
@@ -151,7 +174,9 @@
   },
   {
     "title": "Fearless",
-    "authors": ["Lauren Roberts"],
+    "authors": [
+      "Lauren Roberts"
+    ],
     "description": "Paedyn and Kai embark upon their final adventure in the thrilling conclusion to Roberts' megaselling YA romantasy series.",
     "price": 28.99,
     "publisher": "Simon & Schuster Ltd",
@@ -165,7 +190,9 @@
   },
   {
     "title": "Ali Mau",
-    "authors": ["No Words For This"],
+    "authors": [
+      "No Words For This"
+    ],
     "description": "The much anticipated memoir by media personality Alison Mau. In my family, we never talked about the past... Since the age of twelve, Alison Mau wanted to be a journalist just like her dad. A beer-swilling, straight-talking man who was rough around the edges but could quote passages of Hamlet at will, he taught Ali everything from rabbit-hunting to throwing a punch and crafting a sharp sentence.",
     "price": 39.99,
     "publisher": "HarperCollins Publishers (New Zealand)",
@@ -179,7 +206,9 @@
   },
   {
     "title": "Frankie",
-    "authors": ["Graham Norton"],
+    "authors": [
+      "Graham Norton"
+    ],
     "description": "This expansive, heartfelt story of memory and human connection from the bestselling author of Home Stretch and A Keeper finds an elderly Londoner and her young Irish carer bond, as the titular protagonist tells him the story of her past filled with larger-than-life characters.",
     "price": 37.99,
     "publisher": "Hodder & Stoughton",
@@ -191,5 +220,254 @@
     "dimensions": "234 x 153 x 35 mm",
     "synopsis": "Frankie Howe has lived a long life, and her small London flat is crammed full of art, furniture, and memories. Damian, her young carer, listens as she gradually tells him parts of her story, from New York's art scene to her life in London. Frankie discovers that life is not always the one we hope for, or the one others expect of us.",
     "coverImage": "frankie.jpg"
+  },
+  {
+    "title": "Counting Miracles",
+    "authors": [
+      "Nicholas Sparks"
+    ],
+    "description": "From the author of the mega-selling The Notebook comes another heart-rending exploration of the human heart and the importance of connection, as three strangers lives intersect in unexpected ways.",
+    "price": 37.99,
+    "publisher": "Little, Brown Book Group",
+    "publishDate": "2024-09-24T00:00:00.000Z",
+    "genre": "Fiction",
+    "categories": [
+      "Young Adult"
+    ],
+    "tags": [
+      "Romance, General Fiction"
+    ],
+    "isbn": "9780751585551",
+    "format": "Trade Paperback",
+    "pages": 384,
+    "weight": "480g",
+    "dimensions": "234 x 153 x 35 mm",
+    "synopsis": "\n\n'Find where you belong and make that place your own...'\n\nTanner has spent his whole life moving from place to place, belonging nowhere. So when his dying grandmother reveals the name and location of the father he never knew, he plans to visit Asheboro to lay the past to rest, then move on - just as he always has.\n\nKaitlyn knows exactly where she belongs. In Asheboro, she's built a life for herself and her kids that she's proud of, especially after the turmoil of divorce. But when she meets lone wolf Tanner, she can't help but feel something has been missing until now.\n\nJasper will never belong again. He had everything - and he lost it all. Now with only his old dog Arlo for company, he lives quietly, haunted by the tragic accident that took place decades before.\n\nThree strangers' worlds are about to collide, changing the trajectory of all their lives. Because some paths cross, some merge, and others guide you home...\n\nFrom the much-loved bestselling author of The Notebook comes a brand-new touching and tender novel about the journeys we take and those who touch our hearts along the way.\n",
+    "coverImage": "/uploads/counting-miracles.jpg"
+  },
+  {
+    "title": "Retirement Ready",
+    "authors": [
+      "Martin Hewes"
+    ],
+    "description": "Join acclaimed financial expert Martin Hawes as he shares the behind-the-scenes strategies that transformed his own retirement planning. With over 35 years of experience, Martin navigates the complex maze of decisions you face as you approach this pivotal life stage. From choosing who should manage your money to deciding on your investment approach, to determining how much you ll need to sustain your lifestyle, Retirement Ready tackles the critical questions that will shape ...",
+    "price": 39.99,
+    "publisher": "Upstart Press Ltd",
+    "publishDate": "2025-03-13T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Health and Wellbeing"
+    ],
+    "tags": [
+      "Retirement"
+    ],
+    "isbn": "9781776940448",
+    "format": "Paperback",
+    "pages": null,
+    "weight": "",
+    "dimensions": "",
+    "synopsis": "Join acclaimed financial expert Martin Hawes as he shares the behind-the-scenes strategies that transformed his own retirement planning. With over 35 years of experience, Martin navigates the complex maze of decisions you face as you approach this pivotal life stage.\nFrom choosing who should manage your money to deciding on your investment approach, to determining how much you ll need to sustain your lifestyle, Retirement Ready tackles the critical questions that will shape your future. Should you downsize your home? How do you balance current spending with leaving a legacy for your children? What insurance options should you consider, and is a family trust still right for you. ",
+    "coverImage": "/uploads/retirement-ready.jpg"
+  },
+  {
+    "title": "Untouchable Girls: The Topp Twins' Story",
+    "authors": [
+      "Lynda Topp",
+      "Jools Topp"
+    ],
+    "description": "The incredible story of how a couple of country kids from Huntly became much-loved Kiwi icons and TV stars, with their own unique brand of original country music and comedy that has captivated audiences in New Zealand and overseas for over 40 years. Jools and Lynda Topp aka The Topp Twins tell this story in their own words, describing their adventurous lives through laugh-out-loud anecdotes and heart-warming tales. As well as their long careers as country music stars ...",
+    "price": 49.99,
+    "publisher": "Allen & Unwin Aotearoa New Zealand",
+    "publishDate": "2023-10-03T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Biography"
+    ],
+    "tags": [
+      "Memoir, Topp Twins"
+    ],
+    "isbn": "9781991006387",
+    "format": "Hardback",
+    "pages": 320,
+    "weight": "540g",
+    "dimensions": "234 x 153 x 35 mm",
+    "synopsis": "The incredible story of how a couple of country kids from Huntly became much-loved Kiwi icons and TV stars, with their own unique brand of original country music and comedy that has captivated audiences in New Zealand and overseas for over 40 years. Jools and Lynda Topp aka The Topp Twins tell this story in their own words, describing their adventurous lives through laugh-out-loud anecdotes and heart-warming tales. As well as their long careers as country music stars and comedians, with characters like Camp Mother & Camp Leader and Ken & Ken, the twins have always stood up for their political beliefs and have been embraced by New Zealanders from all walks of life. Including never-before-told stories and images, this is a nostalgic and important historic record of the lives of two ground-breaking and inspiring women, and of the times through which they've lived. ",
+    "coverImage": "/uploads/topp-twins.jpg"
+  },
+  {
+    "title": "No Words For This",
+    "authors": [
+      "Ali Mau"
+    ],
+    "price": 39.99,
+    "publisher": "Harper",
+    "categories": [],
+    "tags": [],
+    "coverImage": ""
+  },
+  {
+    "title": "No Words For This",
+    "authors": [
+      "Ali Mau"
+    ],
+    "description": "The much anticipated memoir by media personality Alison Mau In my family, we never talked about the past... Since the age of twelve, Alison Mau wanted to be a journalist just like her dad. A beer-swilling, straight-talking man who was rough around the edges but could quote passages of Hamlet at will, he taught Ali everything from rabbit-hunting to throwing a punch and crafting a sharp sentence. ",
+    "price": 39.99,
+    "publisher": "HarperCollins Publishers (New Zealand)",
+    "publishDate": "2025-04-01T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Biography and Memoir"
+    ],
+    "tags": [],
+    "isbn": "9781775542537",
+    "format": "Paperback",
+    "pages": 304,
+    "dimensions": "235 x 155 x 25",
+    "synopsis": "The much anticipated memoir by media personality Alison Mau In my family, we never talked about the past... Since the age of twelve, Alison Mau wanted to be a journalist just like her dad. A beer-swilling, straight-talking man who was rough around the edges but could quote passages of Hamlet at will, he taught Ali everything from rabbit-hunting to throwing a punch and crafting a sharp sentence. Didn't matter that he complained loudly of his sexless marriage and put down the women in their social circle - these were just a mark of the times, Ali thought. Ali grew up in suburban Melbourne in the 1970s, and got her start in journalism at The Warracknabeal Herald, where the entire reporting staff of the eight-page gazette was female. But from there, Ali would go on to work in some of the most infamous and patriarchal Australian newsrooms of the 80s and 90s, including the Herald Sun, and Australia's top TV news station, Channel 9, under the notorious John Sorrel. When romance took her to New Zealand, Ali made a glittering career for herself as New Zealand's media darling of the early noughties, one half of the country's most recognizable news power-couple and going on to host shows such as Breakfast, Seven Sharp, Fair Go and RadioLIVE. Then one day Ali's sister called her out of the blue for a conversation forty years in the making. In this book, Ali recounts what happened when she reckoned with flashbacks of a buried past. She began to question her whole identity, and the reason she became a journalist. It set Ali on a new path for herself and for other survivors of sexual abuse. As the leading journalist for New Zealand's #MeToo movement, Ali was forced to ask the same questions so many others face: Am I strong enough to go through this? What does justice look like? This is an inspiring, personal and honest memoir about family, love, purpose, and rising from the ashes to re-discover yourself.",
+    "coverImage": "/uploads/ali-mau.jpg"
+  },
+  {
+    "title": "A Duty of Care",
+    "authors": [
+      "Gerald Seymour"
+    ],
+    "description": "Compelling . . . almost Dickensian' Times 'The best thriller writer in the world' Daily Telegraph ***** Jonas Merrick - a legendary intelligence analyst for MI5 - has been banished to the Post Room of Thames House. There, he is expected to pass his remaining days before inevitable retirement. In a Russian gulag, an MI6 agent has developed an unlikely passion for a prisoner and has come up with an ingenious plan to free her. The key: a ruthless Albanian gang laundering the dirty money of the Russian elite. Merrick, the only agent with the experience to help, is brought back once again to intercept the Albanian courier until an exchange is organised by the Russians. But when it transpires that the courier is the heir of the criminal gang's leader, the danger mounts, and Merrick once again finds himself in a situation spiralling towards a bloody confrontation. Frighteningly topical and intensely plotted, Jonas Merrick - one of the great figures of modern spy fiction - returns.",
+    "price": 37.99,
+    "publisher": "Hodder & Stoughton",
+    "publishDate": "2025-04-08T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Crime, Thriller"
+    ],
+    "tags": [
+      "Crime, Mystery, Thriller"
+    ],
+    "isbn": "9781399722063",
+    "format": "Trade Paperback",
+    "pages": 400,
+    "weight": "520g",
+    "dimensions": "234 x 153 x 35 mm",
+    "synopsis": "Compelling . . . almost Dickensian' Times 'The best thriller writer in the world' Daily Telegraph ***** Jonas Merrick - a legendary intelligence analyst for MI5 - has been banished to the Post Room of Thames House. There, he is expected to pass his remaining days before inevitable retirement. In a Russian gulag, an MI6 agent has developed an unlikely passion for a prisoner and has come up with an ingenious plan to free her. The key: a ruthless Albanian gang laundering the dirty money of the Russian elite. Merrick, the only agent with the experience to help, is brought back once again to intercept the Albanian courier until an exchange is organised by the Russians. But when it transpires that the courier is the heir of the criminal gang's leader, the danger mounts, and Merrick once again finds himself in a situation spiralling towards a bloody confrontation. Frighteningly topical and intensely plotted, Jonas Merrick - one of the great figures of modern spy fiction - returns.",
+    "coverImage": "/uploads/duty-care.jpg"
+  },
+  {
+    "title": "Nemesis",
+    "authors": [
+      "Gregg Hurwitz"
+    ],
+    "description": "THE INCREDIBLE TENTH BOOK IN THE ORPHAN-X SERIES - GUARANTEED TO THRILL YOU FROM PAGE ONE . . .\n\n\n'Outstanding in every way' LEE CHILD\n\n'Laughs as well as action. A thriller that makes the Jack Reacher books look quaint' Sun",
+    "price": 38,
+    "publisher": "Penguin Books Ltd",
+    "publishDate": "2025-12-02T00:00:00.000Z",
+    "genre": "Fiction",
+    "categories": [
+      "Crime, Thriller"
+    ],
+    "tags": [
+      "Espionage, Spy, Mystery"
+    ],
+    "isbn": "9780241598979",
+    "format": "Trade Paperback",
+    "pages": 400,
+    "weight": "",
+    "dimensions": "234 x 153 x 40",
+    "synopsis": "NO GREATER FRIEND\n\nEvan Smoak is the guy you want on your side. A former government black ops assassin, he'll be there for you in your darkest hour - and he'll rain hell and thunder on those who caused your pain.\n\nNO WORSE ENEMY\n\nA lone wolf operator, Evan can't afford to lose any of the few people he likes and trusts. But when Tommy Stojack, Evan's loyal, long-time gunsmith and armourer, betrays him, it's war.\n\nBecause a good assassin keeps his friends close, but his weapons closer . . .\n\n--\n\n'He is a weapon of mass entertainment and the action never stops' Daily Express\n\n'First-rate, deftly varied combat scenes'The Times\n\nPraise for the Orphan X series\n\n'Feels like a missile launch' DAVID BALDACCI\n\n'Outstanding in every way' LEE CHILD\n\n'Weapons-grade thriller writing'GUARDIAN\n\n'An immensely entertaining adventure'THE TIMES",
+    "coverImage": "/uploads/nemesis.jpg"
+  },
+  {
+    "title": "Frankie",
+    "authors": [
+      "Graham Norton"
+    ],
+    "description": "This expansive, heartfelt story of memory and human connection from the bestselling author of Home Stretch and A Keeper finds an elderly Londoner and her young Irish carer bond, as the titular protagonist tells him the story of her past filled with larger-than-life characters.",
+    "price": 37.99,
+    "publisher": "Hodder & Stoughton",
+    "publishDate": "2024-09-10T00:00:00.000Z",
+    "genre": "Fiction",
+    "categories": [
+      "Contemporary"
+    ],
+    "tags": [
+      "Historical, Ireland, Audiobook, Bestsellers"
+    ],
+    "isbn": "9781529391459",
+    "format": "Trade Paperback",
+    "pages": 336,
+    "weight": "499g",
+    "dimensions": "234 x 153 x 35 mm",
+    "synopsis": "\n\nFrankie Howe has lived a long life and her small London flat is crammed full of art, furniture and memories. Damian, her young carer, listens as she gradually tells him parts of her story - a story that takes us into a progressive, daring world of New York artists on the brink of fame, aspiring writers and larger-than-life characters.\n\nAlways just on the periphery, looking on, young Frankie is never quite sure enough of herself to take centre stage. But the outsider holds certain advantages, sees things others don't, can influence without drawing attention. And when the map has been lost, it's anyone's guess where you may end up, or the accidental choices you find you have made. Frankie discovers that life is not always the one we hope for, or the one others expect of us.\n\nTaking us from Ireland in the 1940s, to the dazzling art scene of 1960s New York by way of London, Frankie is an immersive, decade-sweeping story that brims with Graham Norton's trademark heart, intelligence and compellingly written characters.\n",
+    "coverImage": "/uploads/frankie.jpg"
+  },
+  {
+    "title": "One Moment in Time",
+    "authors": [
+      "Ben Lerwill",
+      "Alette Straahof (Illustrator)"
+    ],
+    "description": "It’s 7 o’clock in the morning in Mexico, and Javier is eating his breakfast. He’s having corn tortillas with beans and a glass of orange juice.\n\nAnd at exactly the same time…\n\n…it’s 8 o’clock in the morning in New York City. Kayla is getting her schoolbag ready. A yellow school bus will take her to the school gates.",
+    "price": 46,
+    "publisher": "Quarto Publishing PLC",
+    "publishDate": "2021-09-21T00:00:00.000Z",
+    "genre": "Children's Books",
+    "categories": [
+      "Non Fiction"
+    ],
+    "tags": [
+      "Social Sciences, Education, Geography"
+    ],
+    "isbn": "9780711263512",
+    "format": "Hardback",
+    "pages": 32,
+    "dimensions": "290 x 235 mm",
+    "synopsis": "One Moment in Time is a lyrical celebration of diversity with a heartfelt message of unity. Featuring eleven different children, this book takes readers on a colourful, eye-opening journey around the globe in a single day, showing what children in different countries are each doing at the same point in time. \n\nFrom travel writer Ben Lerwill, and with beautiful illustrations from Alette Straathof this non-fiction picture book introduces children to different cultures around the world. ",
+    "coverImage": "/uploads/one-moment-time.jpg"
+  },
+  {
+    "title": "Throne of Glass",
+    "authors": [
+      "Sarah J. Maas"
+    ],
+    "description": "A modern classic of YA literature and the start of the mega-selling series of the same name, Maas' stellar fantasy debut introduces Celaena Sardothien and the deafly contest she must win to secure her freedom.",
+    "price": 24.99,
+    "publisher": "Bloomsbury Publishing PLC",
+    "publishDate": "2023-02-14T00:00:00.000Z",
+    "genre": "Young Adult",
+    "categories": [
+      "Romance, Fantasy"
+    ],
+    "tags": [
+      "Magic, Audiobooks"
+    ],
+    "isbn": "9781526660923",
+    "format": "Paperback",
+    "pages": 416,
+    "weight": "300g",
+    "dimensions": "196 x 128 x 25",
+    "synopsis": "\n\nEnter the realm. Unleash the darkness. Live the legend.\n\nIn a land without magic, an assassin is summoned to the castle. Celaena Sardothien has no love for the vicious king who rules from his throne of glass, but she has not come to kill him. She has come to win her freedom. If she defeats twenty-three murderers, thieves, and warriors in a deadly competition, she will be released from prison to serve as the King's Champion.\n\nBut something rotten dwells in the castle - and it's there to kill. When her competitors start dying mysteriously, one by one, Celaena's fight for freedom becomes a fight for survival - and a desperate quest to root out the evil before it destroys her world, and the people she has come to love. Thrilling and fierce, Throne of Glass is the first book in the #1 New York Times bestselling series that has captivated readers worldwide.\n",
+    "coverImage": "/uploads/throne-glass.jpg"
+  },
+  {
+    "title": "Windows 11 For Dummies",
+    "authors": [
+      "Andy Rathbone"
+    ],
+    "description": "Need Windows help? Find the latest tips and tricks in this perennial favorite on Windows Windows 11 promises to be the fastest, most secure, and most flexible version of the Microsoft operating system yet. With a promise like that, of course you want to start using it, as quickly as possible! ",
+    "price": 52.99,
+    "publisher": "John Wiley & Sons Inc",
+    "publishDate": "2021-11-23T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Computers, Information Technology"
+    ],
+    "tags": [
+      "Hardware, Windows 11, Dummies"
+    ],
+    "isbn": "9781119846475",
+    "format": "Paperback",
+    "pages": 464,
+    "weight": "540g",
+    "dimensions": "234 x 153 x 35 mm",
+    "synopsis": "Windows 11 For Dummies gives you that speed, security, and flexibility by getting you up to date with the latest in Windows. Windows expert and bestselling author Andy Rathbone gives you a helping hand by showing you how to get around the newly updated Windows 11 interface, how to use the new Windows tools like Teams and widgets, and how to use Android apps. Your tour of Windows 11 starts with the Start menu and ends with how to troubleshoot when things go wrong. In between you find out how to find files on your hard drive, connect with friends and colleagues on Microsoft Teams, transfer photos from your phone to your hard drive, or switch between your desktop and laptop. Additional topics include: Navigating the Start menu Finding where your files are hiding Adding separate user accounts to keep your kids out of your business Connecting to a WiFi network Customizing your widgets Switching to a laptop or tablet You know what you want to get done. Keep Windows 11 For Dummies by your desktop, laptop, and tablet, and you can open it at any time to find out how to get your Windows computer to do what you need. ",
+    "coverImage": "/uploads/windows-11-dummies.jpg"
   }
 ]

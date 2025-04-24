@@ -9,6 +9,9 @@ const AdminBookForm = () => {
     price: "",
     publisher: "",
     publishDate: "",
+    genre: "",
+    categories: "",
+    tags: "",
     isbn: "",
     format: "",
     pages: "",
@@ -88,6 +91,9 @@ const AdminBookForm = () => {
             "price",
             "publisher",
             "publishDate",
+            "genre",
+            "categories",
+            "tags",
             "isbn",
             "format",
             "pages",
@@ -108,6 +114,11 @@ const AdminBookForm = () => {
                 name={field}
                 value={formData[field] || ""}
                 onChange={handleChange}
+                placeholder={
+                  ["authors", "genres", "categories", "tags"].includes(field)
+                    ? "Seperate with commas"
+                    : ""
+                }
               />
             </div>
           ))}

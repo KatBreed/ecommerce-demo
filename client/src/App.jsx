@@ -31,12 +31,12 @@ const App = () => {
 
   // Define routes to be more readable
   const routes = [
-    { path: "/", element: <Home /> },
+    { path: "/", element: <Home cart={cart} setCart={setCart}/> },
     { path: "/shop", element: <Shop cart={cart} setCart={setCart} /> },
     { path: "/cart", element: <Cart cart={cart} setCart={setCart} /> },
-    { path: "/admin", element: <AdminBookForm /> },
-    { path: "/success", element: <Success setCart={setCart} /> },
-    { path: "/cancel", element: <Cancel /> },
+    { path: "/admin", element: <AdminBookForm cart={cart} setCart={setCart}/> },
+    { path: "/success", element: <Success cart={cart} setCart={setCart} /> },
+    { path: "/cancel", element: <Cancel cart={cart} setCart={setCart}/> },
     {
       path: "/book/:id",
       element: <BookDetail cart={cart} setCart={setCart} />,

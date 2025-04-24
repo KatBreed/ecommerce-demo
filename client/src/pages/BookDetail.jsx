@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const BookDetail = ({ cart, setCart }) => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -29,7 +29,7 @@ const BookDetail = ({ cart, setCart }) => {
         ? prevCart.map((item) =>
             item._id === book._id
               ? { ...item, quantity: item.quantity + 1 }
-              : item,
+              : item
           )
         : [...prevCart, { ...book, quantity: 1 }];
     });
@@ -46,17 +46,24 @@ const BookDetail = ({ cart, setCart }) => {
 
   return (
     <div className="container py-5">
+      {/* Breadcrumbs Navigation */}
+      <Breadcrumbs
+        items={[
+          { label: "Home", path: "/" },
+          { label: "Shop", path: "/shop" },
+        ]}
+        current={book.title}
+      />
+
       <div className="row">
         {/* Image Section */}
         <div className="col-md-5 text-center mb-4">
-          {book.coverImage && (
-            <img
-              src={book.coverImage}
-              alt={book.title}
-              className="img-fluid shadow-sm"
-              style={{ maxHeight: "450px", objectFit: "contain" }}
-            />
-          )}
+          <img
+            src={book.coverImage || "/placeholder-image.jpg"}
+            alt={book.title}
+            className="img-fluid shadow-sm rounded"
+            style={{ maxHeight: "450px", objectFit: "cover" }}
+          />
         </div>
 
         {/* Book Info Section */}
@@ -74,44 +81,49 @@ const BookDetail = ({ cart, setCart }) => {
             Add to Cart
           </button>
 
-          {/* Book Details Below the Add to Cart */}
-          <div className="mt-4">
-            <p className="mb-1 text-start">
-              <strong>Format:</strong> {book.format}
-            </p>
-            <p className="mb-1 text-start">
-              <strong>Publisher:</strong> {book.publisher}
-            </p>
-            <p className="mb-1 text-start">
-              <strong>Published:</strong>{" "}
-              {book.publishDate
-                ? new Date(book.publishDate).toLocaleDateString()
-                : "N/A"}
-            </p>
-            <p className="mb-1 text-start">
-              <strong>ISBN:</strong> {book.isbn || "N/A"}
-            </p>
-            <p className="mb-1 text-start">
-              <strong>Pages:</strong> {book.pages || "N/A"}
-            </p>
-            <p className="mb-1 text-start">
-              <strong>Dimensions:</strong> {book.dimensions || "N/A"}
-            </p>
-            <p className="mb-3 text-start">
-              <strong>Weight:</strong> {book.weight || "N/A"}
-            </p>
+          {/* Tabs for Extra Details */}
+          <ul className="nav nav-tabs mt-4">
+            <li className="nav-item">
+              <a className="nav-link active" data-bs-toggle="tab" href="#details">
+                Details
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" data-bs-toggle="tab" href="#description">
+                Description
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" data-bs-toggle="tab" href="#synopsis">
+                Synopsis
+              </a>
+            </li>
+          </ul>
+
+          {/* Tab Content */}
+          <div className="tab-content mt-3">
+            {/* Details Tab */}
+            <div className="tab-pane fade show active" id="details">
+              <p><strong>Format:</strong> {book.format}</p>
+              <p><strong>Publisher:</strong> {book.publisher}</p>
+              <p><strong>Published:</strong> {book.publishDate ? new Date(book.publishDate).toLocaleDateString() : "N/A"}</p>
+              <p><strong>Genre:</strong> {book.genre}</p>
+              <p><strong>ISBN:</strong> {book.isbn || "N/A"}</p>
+              <p><strong>Pages:</strong> {book.pages || "N/A"}</p>
+              <p><strong>Dimensions:</strong> {book.dimensions || "N/A"}</p>
+            </div>
+
+            {/* Description Tab */}
+            <div className="tab-pane fade" id="description">
+              <p className="text-secondary">{book.description || "No description available for this title."}</p>
+            </div>
+
+            {/* Synopsis Tab */}
+            <div className="tab-pane fade" id="synopsis">
+              <p className="text-secondary">{book.synopsis || "No synopsis available for this title."}</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Tabs or Synopsis Section */}
-      <div className="mt-5">
-        <h5>Synopsis</h5>
-        <p className="text-secondary">
-          {book.synopsis ||
-            book.description ||
-            "No synopsis available for this title."}
-        </p>
       </div>
     </div>
   );
