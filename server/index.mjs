@@ -34,7 +34,6 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Stripe setup
 import Stripe from 'stripe';
-import { CgPassword } from 'react-icons/cg';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Stripe webhook endpoint (MUST come before express.json)
@@ -73,7 +72,7 @@ app.post('/webhook', bodyParser.raw({ type: 'application/json' }), (req, res) =>
       console.log(`Unhandled event type ${event.type}`);
   }
 
-  res.send();
+  res.status(200).send();
 });
 
 // Parse JSON for all other routes
@@ -92,11 +91,11 @@ const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
   {
     authenticate: async (email, password) => {
       if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
-        return {email};
+        return { email };
       }
       return null;
     },
-    cookiePassword: process.env.COOKIE_SECRET || 'some-secure-cookie',
+    cookiePassword: process.env.COOKIE_SECRET || '9ca1baa72045f5a189ba84212e8307eaee12cfd38f9f25a922a39359e3890a36',
   },
   null,
   {
@@ -155,6 +154,32 @@ app.get('/api/books/:id', async (req, res) => {
     res.json(bookObj);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// Route to get books by genre
+app.get('/api/books/genre/:genre', async (req, res) => {
+  const { genre } = req.params;
+
+  try {
+    const books = await Book.find({ genre: { $regex: new RegExp(`^${genre}$`, 'i') } });
+    if (books.length === 0) {
+      return res.status(404).json({ message: "No books found in this genre" });
+    }
+
+    const updatedBooks = books.map(book => {
+      const bookObj = book.toObject();
+      if (bookObj.coverImage && !bookObj.coverImage.startsWith('http')) {
+        if (!bookObj.coverImage.startsWith('/uploads/')) {
+          bookObj.coverImage = `/uploads/${bookObj.coverImage}`;
+        } bookObj.coverImage = `${BASE_URL}${bookObj.coverImage}`;
+      }
+      return bookObj;
+    })
+    res.json(updatedBooks);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error fetching books by genre" });
   }
 });
 
@@ -221,10 +246,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('✅ MongoDB connected successfully to Atlas');
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
@@ -233,3 +255,4 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('❌ MongoDB connection error:', err);
     process.exit(1);
   });
+

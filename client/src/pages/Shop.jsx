@@ -15,22 +15,31 @@ const Shop = ({ cart, setCart }) => {
   const [notification, setNotification] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/books")
-      .then((res) => {
+    setLoading(true);
+    const fetchBooks = async () => {
+      try {
+        const endpoint =
+          genre !== "all"
+            ? `http://localhost:5000/api/books/genre/${genre}?limit=100`
+            : "http://localhost:5000/api/books";
+  
+        const res = await axios.get(endpoint);
         const uniqueBooks = res.data.filter(
           (book, index, self) =>
             index === self.findIndex((b) => b._id === book._id)
         );
         setBooks(uniqueBooks);
         setDisplayBooks(uniqueBooks);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err.message || "Error loading books.");
+      } finally {
         setLoading(false);
-      });
-  }, []);
+      }
+    };
+  
+    fetchBooks();
+  }, [genre]);
+  
 
   useEffect(() => {
     let filtered = [...books];
@@ -126,7 +135,11 @@ const Shop = ({ cart, setCart }) => {
 
       <div className="row">
         <div className="col-lg-3 mb-4">
-          <div className="sticky-top" style={{ top: "5rem" }}>
+          <div className="sticky-top shop-sidebar" style={{ top: "5rem" }}>
+            <h5 className="fw-bold mb-3">
+              <i className="bi bi-funnel-fill me-2" />
+              Filters
+            </h5>
             <div className="mb-4">
               <label className="form-label fw-bold">Search</label>
               <input

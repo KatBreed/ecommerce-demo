@@ -8,7 +8,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const genresToShow = ["Fiction", "Non Fiction", "Young Adult", "Childrens", "Biography and Memoir", "History"];
+  const genresToShow = ["Fiction",  "Non Fiction", "Biography and Memoir","Young Adult", "Children's", "History"];
 
   useEffect(() => {
     axios
@@ -29,7 +29,7 @@ const Home = () => {
         <h2 className="mb-3">Welcome to the Demo Bookshop</h2>
         <p className="lead mb-4">Start exploring our amazing book collection!</p>
         <Link to="/shop" className="btn btn-primary btn-lg">
-          Browse All Books Here
+          Start Browsing Here
         </Link>
       </div>
 
@@ -39,7 +39,7 @@ const Home = () => {
         </div>
       ) : (
         genresToShow.map((genre) => (
-          <GenreRow key={genre} title={genre} books={getBooksByGenre(genre)} />
+          <GenreRow key={genre} title={genre} books={getBooksByGenre(genre).slice(0, 10)} />
         ))
       )}
     </Container>

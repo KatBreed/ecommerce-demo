@@ -469,5 +469,121 @@
     "dimensions": "234 x 153 x 35 mm",
     "synopsis": "Windows 11 For Dummies gives you that speed, security, and flexibility by getting you up to date with the latest in Windows. Windows expert and bestselling author Andy Rathbone gives you a helping hand by showing you how to get around the newly updated Windows 11 interface, how to use the new Windows tools like Teams and widgets, and how to use Android apps. Your tour of Windows 11 starts with the Start menu and ends with how to troubleshoot when things go wrong. In between you find out how to find files on your hard drive, connect with friends and colleagues on Microsoft Teams, transfer photos from your phone to your hard drive, or switch between your desktop and laptop. Additional topics include: Navigating the Start menu Finding where your files are hiding Adding separate user accounts to keep your kids out of your business Connecting to a WiFi network Customizing your widgets Switching to a laptop or tablet You know what you want to get done. Keep Windows 11 For Dummies by your desktop, laptop, and tablet, and you can open it at any time to find out how to get your Windows computer to do what you need. ",
     "coverImage": "/uploads/windows-11-dummies.jpg"
+  },
+  {
+    "title": "Toi Te Mana: An Indigenous History of Maori Art",
+    "authors": [
+      "Deidre Brown",
+      "Ngarino Ellis",
+      "Jonathan Mane-Wheoki"
+    ],
+    "description": "He toi whakairo, he mana tangata.Through artistic excellence, there is human dignity. Toi Te Mana is a landmark account of Maori art from the time of the tupuna (ancestors) to the present day. In 600 pages and over 500 extraordinary images, this volume invites readers to climb on to the waka for a remarkable voyage - from ancestral weavers to contemporary artists at the Venice Biennale, from whare whakairo to film, and from Te Puea Herangi to Michael Parekowhai.",
+    "price": 99.99,
+    "publisher": "Auckland University Press",
+    "publishDate": "2024-11-14T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Art and Photography"
+    ],
+    "tags": [
+      "New Zealand, Maori, Indigenous"
+    ],
+    "isbn": "9781869409197",
+    "format": "Hardback",
+    "pages": 616,
+    "weight": "",
+    "dimensions": "300 x 245",
+    "synopsis": "The Authors explore a wide field of art practice: raranga (plaiting), whatu (weaving), moko (tattoo), whakairo (carving), rakai (jewellery), kakahu (textiles), whare (architecture), toi whenua (rock art), painting, photography, sculpture, ceramics, installation art, digital media and film. And they do so over a long time period - from the arrival of Pacific voyagers 800 years ago to contemporary artists in Aotearoa and around the world today. Through wide-ranging chapters alongside focused breakout boxes on individual artists, movements and events, Toi Te Mana is a waka eke noa - an essential book for anyone interested in te ao Maori. Toi Te Mana is a Maori art history, written by Maori, given to the world. Toitu te whenua, toitu te tikanga, ka ora nga toi. When we hold fast to our land and values, our art flourishes.",
+    "coverImage": "/uploads/toi-te-mana.jpg"
+  },
+  {
+    "title": "The Best of Queenstown and the Southern Lakes",
+    "authors": [
+      "Bob Mcree (Photopgraher)"
+    ],
+    "description": "The rugged south-western coast and awe-inspiring Southern Alps, Otago vineyards, rolling Southland farmland and the spectacular southern lakes are all captured in this inspiring book by award-winning photographer Bob McCree.",
+    "price": 20,
+    "publisher": "David Bateman Ltd",
+    "genre": "Non Fiction",
+    "categories": [
+      "Art and Photography"
+    ],
+    "tags": [
+      "New Zealand, Queenstown, Southland"
+    ],
+    "isbn": "9781988538365",
+    "format": "Hardback",
+    "pages": 112,
+    "dimensions": "127 x 178 x 514",
+    "synopsis": "The rugged south-western coast and awe-inspiring Southern Alps, Otago vineyards, rolling Southland farmland and the spectacular southern lakes are all captured in this inspiring book by award-winning photographer Bob McCree.",
+    "coverImage": "/uploads/queenstown-lakes.jpg"
+  },
+  {
+    "title": "The Games We Play",
+    "authors": [
+      "Alastair B. Hayward"
+    ],
+    "description": "A phantom in the shadows, moving beneath the shroud of London's night, David prowls the desolate park. Unaware of the danger, his victims fall into his trap with cold precision, solidifying his grim reputation as the 'London Strangler.' But the thrill of the kill doesn't satisfy his evil cravings anymore-he needs a new challenge-he needs to up the stake. Enter Pete, the closest person he has to a friend. David concocts a sinister game, luring Pete into a macabre dance of man ...",
+    "price": 38.99,
+    "publishDate": "2024-04-26T00:00:00.000Z",
+    "genre": "Fiction",
+    "categories": [
+      "Horror"
+    ],
+    "tags": [
+      "New Zealand Author"
+    ],
+    "isbn": "9780473713355",
+    "format": "Trade Paperback",
+    "pages": 324,
+    "dimensions": "228 x 150 x 20",
+    "coverImage": "/uploads/games-we-play.jpg"
+  },
+  {
+    "title": "Supremacy: AI, ChatGPT and the race that will change the world",
+    "authors": [
+      "Parmy Olsen"
+    ],
+    "description": "From award-winning journalist Parmy Olson, Supremacy is the astonishing, untold, behind-the-scenes story of the battle between two AI companies, their struggles to use their tech for good, and the dangerous direction that they're now going in. \"They declined his offer too, not realizing how much the thin-skinned Musk didn't like it when people said no. Soon enough though, Hassabis got another email. This time, it was from Google.\" When ChatGPT was released, the world changed overnight. Even as we all played with the new toy, a very real danger was quickly coming to light: that untested automations would undermine our way of life insidiously, sucking value out of our economy, replacing high-level creative jobs and enabling a new, terrifying era of disinformation. It was never meant to be this way. The founders of the two companies behind the most advanced AIs in existence - Open AI (ChatGPT) and DeepMind (Bard) - started their journeys determined to solve humanity's greatest problems. But they couldn't develop their technologies without huge amounts of money - money that Microsoft and Google were more than happy to give them, in exchange for the most powerful seats at the table. From award-winning journalist Parmy Olson, Supremacy is the astonishing, untold, behind-the-scenes story of the battle between two AI companies, their struggles to use their tech for good, and the dangerous direction that they're now going in. Featuring a cast of larger-than-life characters, including Elon Musk, Larry Page, Sergey Brin and Peter Thiel, Supremacy is a story of manipulation, exploitation, secrecy and of ruthless, relentless human progress - progress that will impact all of us for years to come.",
+    "price": 39.99,
+    "publisher": "Pan Macmillan",
+    "publishDate": "2025-02-11T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Computers, Information Technology"
+    ],
+    "tags": [
+      "Ai, ChatGPT"
+    ],
+    "isbn": "9781035038237",
+    "format": "Trade Paperback",
+    "pages": 336,
+    "weight": "",
+    "dimensions": "234 x 153 x 35 mm",
+    "synopsis": "The astonishing, behind-the-scenes story of the race to perfect the greatest invention in human history, artificial intelligence, and the men, women and companies that seek to profit from it all. ",
+    "coverImage": "/uploads/supremacy.jpg"
+  },
+  {
+    "title": "The Diary of a CEO: The 33 Law of Business and Life",
+    "authors": [
+      "Steven Bartlett"
+    ],
+    "description": "The new book by STEVEN BARTLETT- entrepreneur, podcaster and Dragon's Den star This is not a book about business strategy. Strategy changes like the seasons. This is a book about something much more permanent. At the very heart of all the success and failure I've been exposed to - both my own entrepreneurial journey and through the thousands of interviews I've conducted on my podcast - are a set of principles that can stand the test of time, apply to any industry, and be used by anyone who is search of building something great or becoming someone great. These are the fundamental laws that will ensure excellence. They are rooted in psychology and behavioral science, are based on the wisdom of tens of thousands of people I've surveyed across every continent and age group, and of course, drawn from the conversations I've had on my chart-topping podcast with the world's most successful people. These laws will work now or in 100 years from now. Are you ready to get started?",
+    "price": 40,
+    "publisher": "Ebury Publishing",
+    "publishDate": "2023-08-29T00:00:00.000Z",
+    "genre": "Non Fiction",
+    "categories": [
+      "Health and Wellbeing"
+    ],
+    "tags": [
+      "Business"
+    ],
+    "isbn": "9781529146516",
+    "format": "Trade Paperback",
+    "pages": 368,
+    "dimensions": "216 x 135 x 20 mm",
+    "synopsis": "The new book by STEVEN BARTLETT- entrepreneur, podcaster and Dragon's Den star This is not a book about business strategy. Strategy changes like the seasons. This is a book about something much more permanent. At the very heart of all the success and failure I've been exposed to - both my own entrepreneurial journey and through the thousands of interviews I've conducted on my podcast - are a set of principles that can stand the test of time, apply to any industry, and be used by anyone who is search of building something great or becoming someone great. These are the fundamental laws that will ensure excellence. They are rooted in psychology and behavioral science, are based on the wisdom of tens of thousands of people I've surveyed across every continent and age group, and of course, drawn from the conversations I've had on my chart-topping podcast with the world's most successful people. These laws will work now or in 100 years from now. Are you ready to get started?",
+    "coverImage": "/uploads/diary-ceo.jpg"
   }
 ]

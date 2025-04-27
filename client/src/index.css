@@ -144,3 +144,78 @@ button:focus-visible {
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
+/* Sidebar Styling and Effects */
+.shop-sidebar {
+  background: linear-gradient(to bottom right, #f1f5f9, #e2e8f0); /* Even lighter gray gradient */
+  border-left: 4px solid #0d6efd; /* Bootstrap primary color */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.shop-sidebar .form-control,
+.shop-sidebar .form-select {
+  transition: border-color 0.3s ease;
+}
+
+.shop-sidebar .form-control:focus,
+.shop-sidebar .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25); /* Focus shadow */
+}
+
+.shop-sidebar h5 i {
+  transition: transform 0.3s ease;
+}
+
+.shop-sidebar h5 i:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+.shop-sidebar h5 {
+  font-size: 1.2rem;
+}
+
+
+/* Card Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05); /* Slight zoom-in effect on image */
+}
+
+/* Add to Cart Alert */
+.alert.alert-success {
+  animation: slideIn 0.5s ease-out;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.375rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
