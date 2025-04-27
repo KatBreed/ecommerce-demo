@@ -95,7 +95,7 @@ const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
       }
       return null;
     },
-    cookiePassword: process.env.COOKIE_SECRET || '9ca1baa72045f5a189ba84212e8307eaee12cfd38f9f25a922a39359e3890a36',
+    cookiePassword: process.env.COOKIE_SECRET,
   },
   null,
   {
