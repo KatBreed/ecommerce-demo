@@ -8,7 +8,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const genresToShow = ["Fiction",  "Non Fiction", "Biography and Memoir","Young Adult", "Children's", "History"];
+  const genresToShow = ["Fiction", "Non Fiction", "Biography and Memoir", "Young Adult", "Children's", "History"];
 
   useEffect(() => {
     axios

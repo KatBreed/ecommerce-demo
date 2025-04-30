@@ -215,6 +215,30 @@ button:focus-visible {
   }
 }
 
+/* Genre Row */
+.genre-row-border {
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.bg-soft {
+  background-color: #f9f9f9; /* or something like #f3f6fa */
+}
+
+.see-more-link {
+  color: #6c5ce7;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.see-more-link:hover {
+  color: #341f97;
+  text-decoration: underline;
+}
+
+
 
 
 
