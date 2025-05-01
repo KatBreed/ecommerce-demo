@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Breadcrumbs from "../components/Breadcrumbs";
+import Pagination from "../components/Pagination";
 
 const Shop = ({ cart, setCart }) => {
   const [books, setBooks] = useState([]);
@@ -13,6 +14,8 @@ const Shop = ({ cart, setCart }) => {
   const [format, setFormat] = useState("all");
   const [sort, setSort] = useState("");
   const [notification, setNotification] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const booksPerPage = 8;
 
   useEffect(() => {
     setLoading(true);
@@ -22,7 +25,7 @@ const Shop = ({ cart, setCart }) => {
           genre !== "all"
             ? `http://localhost:5000/api/books/genre/${genre}?limit=100`
             : "http://localhost:5000/api/books";
-  
+
         const res = await axios.get(endpoint);
         const uniqueBooks = res.data.filter(
           (book, index, self) =>
@@ -36,10 +39,9 @@ const Shop = ({ cart, setCart }) => {
         setLoading(false);
       }
     };
-  
+
     fetchBooks();
   }, [genre]);
-  
 
   useEffect(() => {
     let filtered = [...books];
@@ -75,6 +77,7 @@ const Shop = ({ cart, setCart }) => {
     }
 
     setDisplayBooks(filtered);
+    setCurrentPage(1);
   }, [filter, genre, format, sort, books]);
 
   const addToCart = (book) => {
@@ -95,9 +98,12 @@ const Shop = ({ cart, setCart }) => {
   };
 
   const genres = [...new Set(books.map((book) => book.genre))].filter(Boolean);
-  const formats = [...new Set(books.map((book) => book.format))].filter(
-    Boolean
-  );
+  const formats = [...new Set(books.map((book) => book.format))].filter(Boolean);
+
+  const indexOfLastBook = currentPage * booksPerPage;
+  const indexOfFirstBook = (currentPage - 1) * booksPerPage;
+  const currentBooks = displayBooks.slice(indexOfFirstBook, indexOfLastBook);
+  const totalPages = Math.ceil(displayBooks.length / booksPerPage);
 
   if (loading) {
     return (
@@ -123,7 +129,6 @@ const Shop = ({ cart, setCart }) => {
         </div>
       )}
 
-      {/* Breadcrumbs Navigation */}
       <Breadcrumbs
         items={[
           { label: "Home", path: "/" },
@@ -134,6 +139,7 @@ const Shop = ({ cart, setCart }) => {
       <h1 className="mb-4">📚 All Books</h1>
 
       <div className="row">
+        {/* Sidebar Filters */}
         <div className="col-lg-3 mb-4">
           <div className="sticky-top shop-sidebar" style={{ top: "5rem" }}>
             <h5 className="fw-bold mb-3">
@@ -200,9 +206,10 @@ const Shop = ({ cart, setCart }) => {
           </div>
         </div>
 
+        {/* Book Cards */}
         <div className="col-lg-9">
           <div className="row">
-            {displayBooks.map((book) => (
+            {currentBooks.map((book) => (
               <div className="col-6 col-md-4 col-lg-3 mb-4" key={book._id}>
                 <div className="card h-100 border-2 shadow-sm p-2">
                   <Link
@@ -239,13 +246,20 @@ const Shop = ({ cart, setCart }) => {
                 </div>
               </div>
             ))}
-
-            {displayBooks.length === 0 && (
-              <div className="col-12">
-                <p>No books found matching your criteria.</p>
-              </div>
-            )}
           </div>
+
+          {/* Pagination */}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+
+          {displayBooks.length === 0 && (
+            <div className="col-12">
+              <p>No books found matching your criteria.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
