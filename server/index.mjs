@@ -5,6 +5,8 @@ import AdminJS from 'adminjs';
 import AdminJSExpress from '@adminjs/express';
 import mongoose from 'mongoose';
 import * as AdminJSMongoose from '@adminjs/mongoose';
+import uploadFeature from '@adminjs/upload';
+import { ComponentLoader } from 'adminjs';
 import cors from 'cors';
 import path from 'path';
 import fs from 'fs';
@@ -29,7 +31,10 @@ const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+  }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Stripe setup
@@ -81,9 +86,48 @@ app.use(express.json());
 // =======================
 // 🔐 AdminJS Integration
 // =======================
+const componentLoader = new ComponentLoader();
+
 const adminJs = new AdminJS({
-  resources: [Book],
+  resources: [
+    {
+      resource: Book,
+      options: {
+        properties: {
+          title: { isTitle: true, position: 1, label: 'Book Title' },
+          price: { type: 'number', position: 2, label: 'Price (NZD)' },
+          genre: { position: 3 },
+          coverImage: {
+            position: 4,
+            type: 'image',
+            isArray: false,
+          },
+        },
+        listProperties: ['title', 'price', 'genre'],
+        filterProperties: ['title', 'genre'],
+        editProperties: ['title', 'price', 'genre', 'coverImage'],
+        showProperties: ['title', 'price', 'genre', 'coverImage'],
+      },
+      features: [
+        uploadFeature({
+          componentLoader,
+          provider: {
+            local: {
+              bucket: path.join(__dirname, 'uploads'), // maps to server/uploads
+            },
+          },
+          properties: {
+            key: 'coverImage',      // stores the path in DB
+            file: 'uploadedFile',   // virtual field handled by AdminJS
+            mimeType: 'mimeType',
+          },
+          uploadPath: (record, filename) => `books/${record.id()}/${filename}`,
+        }),
+      ],
+    },
+  ],  
   rootPath: '/admin',
+  componentLoader,
 });
 
 const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
