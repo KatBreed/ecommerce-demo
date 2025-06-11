@@ -145,10 +145,9 @@ button:focus-visible {
   scrollbar-width: none;     /* Firefox */
 }
 
-
 /* Sidebar Styling and Effects */
 .shop-sidebar {
-  background: linear-gradient(to bottom right, #edf1f5, #edf1f5); /* flattened gradient */
+  background: linear-gradient(to bottom right, #c7d7e7, #edf1f5); /* flattened gradient */
   border-left: 4px solid #0d6efd;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -177,7 +176,6 @@ button:focus-visible {
 .shop-sidebar h5 {
   font-size: 1.2rem;
 }
-
 
 /* Card Hover Effects */
 .card {
@@ -220,11 +218,11 @@ button:focus-visible {
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
   border-radius: 8px;
-  background-color: #edf1f5;
+  border-color: #0d6efd;
 }
 
 .bg-soft {
-  background-color: #edf1f5;
+  background-color: #c7d7e7;
 }
 
 .see-more-link {

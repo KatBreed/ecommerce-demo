@@ -15,6 +15,7 @@ import dotenv from 'dotenv';
 
 import Book from './models/Book.js';
 import uploadRoutes from './routes/upload.js';
+import userRoutes from './routes/User.js'
 
 dotenv.config();
 
@@ -32,10 +33,12 @@ const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: FRONTEND_URL,
   credentials: true
   }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+app.use('/api/users', userRoutes);
 
 // Stripe setup
 import Stripe from 'stripe';
@@ -87,6 +90,15 @@ app.use(express.json());
 // 🔐 AdminJS Integration
 // =======================
 const componentLoader = new ComponentLoader();
+const componentPath = componentLoader.add(
+  'CoverImageList', 
+  path.resolve(__dirname, '../admin/components/cover-image-list.jsx')
+);
+
+const showComponent = componentLoader.add(
+  'CoverImageShow', 
+  path.resolve(__dirname, '../admin/components/cover-image-show.jsx')
+);
 
 const adminJs = new AdminJS({
   resources: [
@@ -94,19 +106,68 @@ const adminJs = new AdminJS({
       resource: Book,
       options: {
         properties: {
-          title: { isTitle: true, position: 1, label: 'Book Title' },
-          price: { type: 'number', position: 2, label: 'Price (NZD)' },
-          genre: { position: 3 },
+          title: {isTitle: true, position: 1, label: 'Book Title'},
+          authors: {position: 2, label: 'Authors'},
+          description: {type: 'richtext', position: 3},
+          price: {type: 'number', position: 4, label: 'Price (NZD)'},
+          publisher: {position: 5},
+          publishDate: {type: 'date', position: 6},
+          genre: {position: 7},
+          categories: {position: 8},
+          tags: {position: 9},
+          isbn: {position: 10},
+          format: {position: 11},
+          pages: {type: 'number', position: 12},
+          weight: {position: 13},
+          dimensions: {position: 14},  
+          synopsis: {type: 'textarea', position: 15},        
           coverImage: {
-            position: 4,
+            position: 16,
             type: 'image',
             isArray: false,
+            components: {
+              list: componentPath,
+              show: showComponent,
+            }
           },
         },
-        listProperties: ['title', 'price', 'genre'],
-        filterProperties: ['title', 'genre'],
-        editProperties: ['title', 'price', 'genre', 'coverImage'],
-        showProperties: ['title', 'price', 'genre', 'coverImage'],
+        listProperties: ['title', 'authors', 'price', 'genre', 'publisher'],
+        filterProperties: ['title', 'authors', 'genre', 'tags', 'publishDate', 'isbn'],
+        editProperties: [
+          'title', 
+          'authors', 
+          'description', 
+          'price', 
+          'publisher', 
+          'publishDate', 
+          'genre', 
+          'categories',
+          'tags',
+          'isbn',
+          'format',
+          'pages',
+          'weight',
+          'dimensions',
+          'synopsis',
+          'coverImage',
+          'uploadedFile'],
+        showProperties: [
+          'title', 
+          'authors', 
+          'description', 
+          'price',
+          'publisher',
+          'publishDate', 
+          'genre', 
+          'categories',
+          'tags',
+          'isbn',
+          'format',
+          'pages',
+          'weight',
+          'dimensions',
+          'synopsis',
+          'coverImage'],
       },
       features: [
         uploadFeature({
@@ -294,7 +355,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('✅ MongoDB connected successfully to Atlas');
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-  })
+  })    
   .catch(err => {
     console.error('❌ MongoDB connection error:', err);
     process.exit(1);
